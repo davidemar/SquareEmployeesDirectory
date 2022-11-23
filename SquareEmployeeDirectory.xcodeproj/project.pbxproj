@@ -17,6 +17,12 @@
 		F3A891CA292DDE61006A23FF /* SquareEmployeeDirectoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A891C9292DDE61006A23FF /* SquareEmployeeDirectoryTests.swift */; };
 		F3A891D4292DDE61006A23FF /* SquareEmployeeDirectoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A891D3292DDE61006A23FF /* SquareEmployeeDirectoryUITests.swift */; };
 		F3A891D6292DDE61006A23FF /* SquareEmployeeDirectoryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A891D5292DDE61006A23FF /* SquareEmployeeDirectoryUITestsLaunchTests.swift */; };
+		F3A891F4292DEB6A006A23FF /* SquareEmployeesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A891F3292DEB6A006A23FF /* SquareEmployeesResponse.swift */; };
+		F3A891F8292DF345006A23FF /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A891F7292DF345006A23FF /* APIClient.swift */; };
+		F3A891FC292DF7E6006A23FF /* SquareEmployeesAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A891FB292DF7E6006A23FF /* SquareEmployeesAPIClient.swift */; };
+		F3A891FE292DF906006A23FF /* SquareEmployeesAPIClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A891FD292DF906006A23FF /* SquareEmployeesAPIClientProtocol.swift */; };
+		F3A89200292E1583006A23FF /* Throwable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A891FF292E1583006A23FF /* Throwable.swift */; };
+		F3A89203292E1AC8006A23FF /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A89202292E1AC8006A23FF /* Logger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,12 @@
 		F3A891CF292DDE61006A23FF /* SquareEmployeeDirectoryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SquareEmployeeDirectoryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3A891D3292DDE61006A23FF /* SquareEmployeeDirectoryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareEmployeeDirectoryUITests.swift; sourceTree = "<group>"; };
 		F3A891D5292DDE61006A23FF /* SquareEmployeeDirectoryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareEmployeeDirectoryUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F3A891F3292DEB6A006A23FF /* SquareEmployeesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareEmployeesResponse.swift; sourceTree = "<group>"; };
+		F3A891F7292DF345006A23FF /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		F3A891FB292DF7E6006A23FF /* SquareEmployeesAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareEmployeesAPIClient.swift; sourceTree = "<group>"; };
+		F3A891FD292DF906006A23FF /* SquareEmployeesAPIClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareEmployeesAPIClientProtocol.swift; sourceTree = "<group>"; };
+		F3A891FF292E1583006A23FF /* Throwable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Throwable.swift; sourceTree = "<group>"; };
+		F3A89202292E1AC8006A23FF /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +113,8 @@
 		F3A891AE292DDE60006A23FF /* SquareEmployeeDirectory */ = {
 			isa = PBXGroup;
 			children = (
+				F3A891F5292DF31F006A23FF /* Shared */,
+				F3A891EC292DE76F006A23FF /* Main View */,
 				F3A891AF292DDE60006A23FF /* AppDelegate.swift */,
 				F3A891B1292DDE60006A23FF /* SceneDelegate.swift */,
 				F3A891B3292DDE60006A23FF /* ViewController.swift */,
@@ -128,6 +142,58 @@
 				F3A891D5292DDE61006A23FF /* SquareEmployeeDirectoryUITestsLaunchTests.swift */,
 			);
 			path = SquareEmployeeDirectoryUITests;
+			sourceTree = "<group>";
+		};
+		F3A891EC292DE76F006A23FF /* Main View */ = {
+			isa = PBXGroup;
+			children = (
+				F3A891ED292DE795006A23FF /* Network */,
+			);
+			path = "Main View";
+			sourceTree = "<group>";
+		};
+		F3A891ED292DE795006A23FF /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F3A891F2292DEB5B006A23FF /* Model */,
+				F3A891FB292DF7E6006A23FF /* SquareEmployeesAPIClient.swift */,
+				F3A891FD292DF906006A23FF /* SquareEmployeesAPIClientProtocol.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F3A891F2292DEB5B006A23FF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F3A891F3292DEB6A006A23FF /* SquareEmployeesResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F3A891F5292DF31F006A23FF /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				F3A89201292E1ABA006A23FF /* Logger */,
+				F3A891F6292DF328006A23FF /* Network */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		F3A891F6292DF328006A23FF /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F3A891F7292DF345006A23FF /* APIClient.swift */,
+				F3A891FF292E1583006A23FF /* Throwable.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F3A89201292E1ABA006A23FF /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				F3A89202292E1AC8006A23FF /* Logger.swift */,
+			);
+			path = Logger;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,10 +327,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3A891FE292DF906006A23FF /* SquareEmployeesAPIClientProtocol.swift in Sources */,
+				F3A89200292E1583006A23FF /* Throwable.swift in Sources */,
 				F3A891B4292DDE60006A23FF /* ViewController.swift in Sources */,
 				F3A891B0292DDE60006A23FF /* AppDelegate.swift in Sources */,
 				F3A891BA292DDE60006A23FF /* SquareEmployeeDirectory.xcdatamodeld in Sources */,
+				F3A89203292E1AC8006A23FF /* Logger.swift in Sources */,
+				F3A891FC292DF7E6006A23FF /* SquareEmployeesAPIClient.swift in Sources */,
+				F3A891F4292DEB6A006A23FF /* SquareEmployeesResponse.swift in Sources */,
 				F3A891B2292DDE60006A23FF /* SceneDelegate.swift in Sources */,
+				F3A891F8292DF345006A23FF /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
