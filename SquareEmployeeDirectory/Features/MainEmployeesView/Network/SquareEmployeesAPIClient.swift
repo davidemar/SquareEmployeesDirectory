@@ -46,16 +46,10 @@ enum SquareEmployeesAPI: API {
 }
 
 class SquareEmployeesAPIClient: SquareEmployeesAPIClientProtocol {
-    class func getEmployees() {
+    func getEmployees(completion: @escaping (Result<SquareEmployeesResponse, Error>) -> ()) {
         let endpoint = SquareEmployeesAPI.getEmployees
-        APIClient.request(endpoint: endpoint) {
-            (result: Result<SquareEmployeesResponse, Error>) in
-            switch result {
-            case .success(let response):
-                print(response)
-            case .failure(let error):
-                Logger.logError(error: error)
-            }
+        APIClient.request(endpoint: endpoint) { (result: Result<SquareEmployeesResponse, Error>) in
+            completion(result)
         }
     }
 }

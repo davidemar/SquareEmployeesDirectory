@@ -8,5 +8,5 @@
 import Foundation
 
 protocol SquareEmployeesAPIClientProtocol {
-    
+    func getEmployees(completion: @escaping (Result<SquareEmployeesResponse, Error>) -> ())
 }

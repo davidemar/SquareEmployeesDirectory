@@ -8,9 +8,22 @@
 import Foundation
 
 class Logger {
-    static func logError(error: Error) {
+    
+    static let shared = Logger()
+    
+    func logError(error: Error) {
         #if DEBUG
-        print(error)
+        print("An error ocurred: \(error)")
+        #endif
+    }
+    
+    func logEvent(name: String, surface: String? = nil) {
+        #if DEBUG
+        var stringEvent = "Event logged: \(name)"
+        if let surface = surface {
+            stringEvent = stringEvent + " Surface \(surface)"
+        }
+        print(stringEvent)
         #endif
     }
 }

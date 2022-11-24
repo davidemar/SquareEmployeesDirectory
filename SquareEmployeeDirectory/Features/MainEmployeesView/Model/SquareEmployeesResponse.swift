@@ -46,7 +46,7 @@ struct SquareEmployeesResponse: Codable {
                     case .success(let employee):
                         employees.append(employee)
                     case .failure(let error):
-                        Logger.logError(error: error)
+                        Logger.shared.logError(error: error)
                     }
         }
     }
