@@ -5,17 +5,18 @@
 //  Created by David Mar on 11/22/22.
 //
 
-// MARK: - Employee
+enum EmployeeType: String, Codable {
+    case contractor = "CONTRACTOR"
+    case fullTime = "FULL_TIME"
+    case partTime = "PART_TIME"
+}
+
 struct Employee: Codable {
-    enum EmployeeType: String, Codable {
-        case contractor = "CONTRACTOR"
-        case fullTime = "FULL_TIME"
-        case partTime = "PART_TIME"
-    }
-    var uuid: String
-    var fullName: String
+    
+    var id: String
+    var name: String
     var phoneNumber: String?
-    var emailAddress: String
+    var email: String
     var biography: String?
     var photoUrlSmall: String?
     var photoUrlLarge: String?
@@ -23,10 +24,10 @@ struct Employee: Codable {
     var employeeType: EmployeeType
     
     enum CodingKeys: String, CodingKey {
-        case uuid = "uuid"
-        case fullName = "full_name"
+        case id = "uuid"
+        case name = "full_name"
         case phoneNumber = "phone_number"
-        case emailAddress = "email_address"
+        case email = "email_address"
         case biography = "biography"
         case photoUrlSmall = "photo_url_small"
         case photoUrlLarge = "photo_url_large"

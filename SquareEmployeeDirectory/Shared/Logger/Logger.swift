@@ -17,6 +17,12 @@ class Logger {
         #endif
     }
     
+    func logError(errorString: String) {
+        #if DEBUG
+        print("An error ocurred: \(errorString)")
+        #endif
+    }
+    
     func logEvent(name: String, surface: String? = nil) {
         #if DEBUG
         var stringEvent = "Event logged: \(name)"
