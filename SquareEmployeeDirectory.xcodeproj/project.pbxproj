@@ -114,7 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				F3A891F5292DF31F006A23FF /* Shared */,
-				F3A891EC292DE76F006A23FF /* Main View */,
+				F3A89204292F1B17006A23FF /* Features */,
 				F3A891AF292DDE60006A23FF /* AppDelegate.swift */,
 				F3A891B1292DDE60006A23FF /* SceneDelegate.swift */,
 				F3A891B3292DDE60006A23FF /* ViewController.swift */,
@@ -144,18 +144,20 @@
 			path = SquareEmployeeDirectoryUITests;
 			sourceTree = "<group>";
 		};
-		F3A891EC292DE76F006A23FF /* Main View */ = {
+		F3A891EC292DE76F006A23FF /* MainEmployeesView */ = {
 			isa = PBXGroup;
 			children = (
+				F3A89207292F1C59006A23FF /* ViewModel */,
+				F3A89206292F1C16006A23FF /* View */,
+				F3A891F2292DEB5B006A23FF /* Model */,
 				F3A891ED292DE795006A23FF /* Network */,
 			);
-			path = "Main View";
+			path = MainEmployeesView;
 			sourceTree = "<group>";
 		};
 		F3A891ED292DE795006A23FF /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				F3A891F2292DEB5B006A23FF /* Model */,
 				F3A891FB292DF7E6006A23FF /* SquareEmployeesAPIClient.swift */,
 				F3A891FD292DF906006A23FF /* SquareEmployeesAPIClientProtocol.swift */,
 			);
@@ -194,6 +196,28 @@
 				F3A89202292E1AC8006A23FF /* Logger.swift */,
 			);
 			path = Logger;
+			sourceTree = "<group>";
+		};
+		F3A89204292F1B17006A23FF /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				F3A891EC292DE76F006A23FF /* MainEmployeesView */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		F3A89206292F1C16006A23FF /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F3A89207292F1C59006A23FF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
