@@ -7,16 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F32B5F712930D1A10069EFA1 /* EmployeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32B5F6F2930D1A10069EFA1 /* EmployeeTableViewCell.swift */; };
+		F340E5D729300A670033645D /* SquareEmployeeDirectory.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F3A891B8292DDE60006A23FF /* SquareEmployeeDirectory.xcdatamodeld */; };
 		F38B103B292F537C009E7579 /* EmployeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38B103A292F537C009E7579 /* EmployeeViewModel.swift */; };
 		F38B103D292F5422009E7579 /* EmployeesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38B103C292F5422009E7579 /* EmployeesViewModel.swift */; };
+		F38B1043292F6ED6009E7579 /* CoreDataImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38B1042292F6ED6009E7579 /* CoreDataImageRepository.swift */; };
+		F38B1045292F6F26009E7579 /* ImageStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38B1044292F6F26009E7579 /* ImageStorage.swift */; };
+		F38B1047292F6F6E009E7579 /* UIImage+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38B1046292F6F6E009E7579 /* UIImage+Data.swift */; };
+		F38B1049292F71AC009E7579 /* ImageWithFileSystemStorage+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38B1048292F71AC009E7579 /* ImageWithFileSystemStorage+CoreDataClass.swift */; };
+		F38B104B292F71C6009E7579 /* ImageWithFileSystemStorage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38B104A292F71C6009E7579 /* ImageWithFileSystemStorage+CoreDataProperties.swift */; };
+		F38B104E29300125009E7579 /* ImageRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38B104D29300125009E7579 /* ImageRepositoryTests.swift */; };
 		F3A891B0292DDE60006A23FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A891AF292DDE60006A23FF /* AppDelegate.swift */; };
 		F3A891B2292DDE60006A23FF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A891B1292DDE60006A23FF /* SceneDelegate.swift */; };
 		F3A891BA292DDE60006A23FF /* SquareEmployeeDirectory.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F3A891B8292DDE60006A23FF /* SquareEmployeeDirectory.xcdatamodeld */; };
 		F3A891BC292DDE61006A23FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3A891BB292DDE61006A23FF /* Assets.xcassets */; };
 		F3A891BF292DDE61006A23FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3A891BD292DDE61006A23FF /* LaunchScreen.storyboard */; };
-		F3A891CA292DDE61006A23FF /* SquareEmployeeDirectoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A891C9292DDE61006A23FF /* SquareEmployeeDirectoryTests.swift */; };
-		F3A891D4292DDE61006A23FF /* SquareEmployeeDirectoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A891D3292DDE61006A23FF /* SquareEmployeeDirectoryUITests.swift */; };
-		F3A891D6292DDE61006A23FF /* SquareEmployeeDirectoryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A891D5292DDE61006A23FF /* SquareEmployeeDirectoryUITestsLaunchTests.swift */; };
 		F3A891F4292DEB6A006A23FF /* SquareEmployeesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A891F3292DEB6A006A23FF /* SquareEmployeesResponse.swift */; };
 		F3A891F8292DF345006A23FF /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A891F7292DF345006A23FF /* APIClient.swift */; };
 		F3A891FC292DF7E6006A23FF /* SquareEmployeesAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A891FB292DF7E6006A23FF /* SquareEmployeesAPIClient.swift */; };
@@ -24,7 +29,11 @@
 		F3A89200292E1583006A23FF /* Throwable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A891FF292E1583006A23FF /* Throwable.swift */; };
 		F3A89203292E1AC8006A23FF /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A89202292E1AC8006A23FF /* Logger.swift */; };
 		F3A89209292F1DF0006A23FF /* EmployeesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A89208292F1DF0006A23FF /* EmployeesViewController.swift */; };
-		F3A8920B292F4E0A006A23FF /* EmployeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A8920A292F4E0A006A23FF /* EmployeeTableViewCell.swift */; };
+		F3B2F78B293086D700910733 /* ProfilePictureRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B2F78A293086D700910733 /* ProfilePictureRepository.swift */; };
+		F3B2F78D2930C27D00910733 /* TitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B2F78C2930C27D00910733 /* TitleLabel.swift */; };
+		F3B2F78F2930C38200910733 /* ContentLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B2F78E2930C38200910733 /* ContentLabel.swift */; };
+		F3B2F7912930C62500910733 /* EmployeeContentStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B2F7902930C62500910733 /* EmployeeContentStackView.swift */; };
+		F3E9E4E129301B4F0017B369 /* ProfilePictureDiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E9E4E029301B4F0017B369 /* ProfilePictureDiskCache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,18 +44,18 @@
 			remoteGlobalIDString = F3A891AB292DDE60006A23FF;
 			remoteInfo = SquareEmployeeDirectory;
 		};
-		F3A891D0292DDE61006A23FF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F3A891A4292DDE60006A23FF /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F3A891AB292DDE60006A23FF;
-			remoteInfo = SquareEmployeeDirectory;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F32B5F6F2930D1A10069EFA1 /* EmployeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableViewCell.swift; sourceTree = "<group>"; };
 		F38B103A292F537C009E7579 /* EmployeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewModel.swift; sourceTree = "<group>"; };
 		F38B103C292F5422009E7579 /* EmployeesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesViewModel.swift; sourceTree = "<group>"; };
+		F38B1042292F6ED6009E7579 /* CoreDataImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataImageRepository.swift; sourceTree = "<group>"; };
+		F38B1044292F6F26009E7579 /* ImageStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStorage.swift; sourceTree = "<group>"; };
+		F38B1046292F6F6E009E7579 /* UIImage+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Data.swift"; sourceTree = "<group>"; };
+		F38B1048292F71AC009E7579 /* ImageWithFileSystemStorage+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageWithFileSystemStorage+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F38B104A292F71C6009E7579 /* ImageWithFileSystemStorage+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageWithFileSystemStorage+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F38B104D29300125009E7579 /* ImageRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRepositoryTests.swift; sourceTree = "<group>"; };
 		F3A891AC292DDE60006A23FF /* SquareEmployeeDirectory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SquareEmployeeDirectory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3A891AF292DDE60006A23FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3A891B1292DDE60006A23FF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,10 +64,6 @@
 		F3A891BE292DDE61006A23FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F3A891C0292DDE61006A23FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3A891C5292DDE61006A23FF /* SquareEmployeeDirectoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SquareEmployeeDirectoryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3A891C9292DDE61006A23FF /* SquareEmployeeDirectoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareEmployeeDirectoryTests.swift; sourceTree = "<group>"; };
-		F3A891CF292DDE61006A23FF /* SquareEmployeeDirectoryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SquareEmployeeDirectoryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3A891D3292DDE61006A23FF /* SquareEmployeeDirectoryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareEmployeeDirectoryUITests.swift; sourceTree = "<group>"; };
-		F3A891D5292DDE61006A23FF /* SquareEmployeeDirectoryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareEmployeeDirectoryUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F3A891F3292DEB6A006A23FF /* SquareEmployeesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareEmployeesResponse.swift; sourceTree = "<group>"; };
 		F3A891F7292DF345006A23FF /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		F3A891FB292DF7E6006A23FF /* SquareEmployeesAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareEmployeesAPIClient.swift; sourceTree = "<group>"; };
@@ -66,7 +71,11 @@
 		F3A891FF292E1583006A23FF /* Throwable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Throwable.swift; sourceTree = "<group>"; };
 		F3A89202292E1AC8006A23FF /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		F3A89208292F1DF0006A23FF /* EmployeesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesViewController.swift; sourceTree = "<group>"; };
-		F3A8920A292F4E0A006A23FF /* EmployeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableViewCell.swift; sourceTree = "<group>"; };
+		F3B2F78A293086D700910733 /* ProfilePictureRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePictureRepository.swift; sourceTree = "<group>"; };
+		F3B2F78C2930C27D00910733 /* TitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLabel.swift; sourceTree = "<group>"; };
+		F3B2F78E2930C38200910733 /* ContentLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentLabel.swift; sourceTree = "<group>"; };
+		F3B2F7902930C62500910733 /* EmployeeContentStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeContentStackView.swift; sourceTree = "<group>"; };
+		F3E9E4E029301B4F0017B369 /* ProfilePictureDiskCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePictureDiskCache.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,22 +93,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F3A891CC292DDE61006A23FF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F38B1041292F6E99009E7579 /* ImageStorage */ = {
+			isa = PBXGroup;
+			children = (
+				F38B1048292F71AC009E7579 /* ImageWithFileSystemStorage+CoreDataClass.swift */,
+				F38B104A292F71C6009E7579 /* ImageWithFileSystemStorage+CoreDataProperties.swift */,
+				F38B1042292F6ED6009E7579 /* CoreDataImageRepository.swift */,
+				F38B1044292F6F26009E7579 /* ImageStorage.swift */,
+				F38B104C293000B6009E7579 /* Tests */,
+			);
+			path = ImageStorage;
+			sourceTree = "<group>";
+		};
+		F38B104C293000B6009E7579 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F38B104D29300125009E7579 /* ImageRepositoryTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 		F3A891A3292DDE60006A23FF = {
 			isa = PBXGroup;
 			children = (
 				F3A891AE292DDE60006A23FF /* SquareEmployeeDirectory */,
-				F3A891C8292DDE61006A23FF /* SquareEmployeeDirectoryTests */,
-				F3A891D2292DDE61006A23FF /* SquareEmployeeDirectoryUITests */,
 				F3A891AD292DDE60006A23FF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -109,7 +129,6 @@
 			children = (
 				F3A891AC292DDE60006A23FF /* SquareEmployeeDirectory.app */,
 				F3A891C5292DDE61006A23FF /* SquareEmployeeDirectoryTests.xctest */,
-				F3A891CF292DDE61006A23FF /* SquareEmployeeDirectoryUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -129,26 +148,10 @@
 			path = SquareEmployeeDirectory;
 			sourceTree = "<group>";
 		};
-		F3A891C8292DDE61006A23FF /* SquareEmployeeDirectoryTests */ = {
-			isa = PBXGroup;
-			children = (
-				F3A891C9292DDE61006A23FF /* SquareEmployeeDirectoryTests.swift */,
-			);
-			path = SquareEmployeeDirectoryTests;
-			sourceTree = "<group>";
-		};
-		F3A891D2292DDE61006A23FF /* SquareEmployeeDirectoryUITests */ = {
-			isa = PBXGroup;
-			children = (
-				F3A891D3292DDE61006A23FF /* SquareEmployeeDirectoryUITests.swift */,
-				F3A891D5292DDE61006A23FF /* SquareEmployeeDirectoryUITestsLaunchTests.swift */,
-			);
-			path = SquareEmployeeDirectoryUITests;
-			sourceTree = "<group>";
-		};
 		F3A891EC292DE76F006A23FF /* MainEmployeesView */ = {
 			isa = PBXGroup;
 			children = (
+				F3E9E4DF29301B300017B369 /* ProfilePictureRepository */,
 				F3A89207292F1C59006A23FF /* ViewModel */,
 				F3A89206292F1C16006A23FF /* View */,
 				F3A891F2292DEB5B006A23FF /* Model */,
@@ -177,8 +180,10 @@
 		F3A891F5292DF31F006A23FF /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				F38B1041292F6E99009E7579 /* ImageStorage */,
 				F3A89201292E1ABA006A23FF /* Logger */,
 				F3A891F6292DF328006A23FF /* Network */,
+				F38B1046292F6F6E009E7579 /* UIImage+Data.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -212,7 +217,10 @@
 			isa = PBXGroup;
 			children = (
 				F3A89208292F1DF0006A23FF /* EmployeesViewController.swift */,
-				F3A8920A292F4E0A006A23FF /* EmployeeTableViewCell.swift */,
+				F3B2F78C2930C27D00910733 /* TitleLabel.swift */,
+				F3B2F78E2930C38200910733 /* ContentLabel.swift */,
+				F3B2F7902930C62500910733 /* EmployeeContentStackView.swift */,
+				F32B5F6F2930D1A10069EFA1 /* EmployeeTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -224,6 +232,15 @@
 				F38B103C292F5422009E7579 /* EmployeesViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F3E9E4DF29301B300017B369 /* ProfilePictureRepository */ = {
+			isa = PBXGroup;
+			children = (
+				F3B2F78A293086D700910733 /* ProfilePictureRepository.swift */,
+				F3E9E4E029301B4F0017B369 /* ProfilePictureDiskCache.swift */,
+			);
+			path = ProfilePictureRepository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,24 +281,6 @@
 			productReference = F3A891C5292DDE61006A23FF /* SquareEmployeeDirectoryTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F3A891CE292DDE61006A23FF /* SquareEmployeeDirectoryUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F3A891DF292DDE61006A23FF /* Build configuration list for PBXNativeTarget "SquareEmployeeDirectoryUITests" */;
-			buildPhases = (
-				F3A891CB292DDE61006A23FF /* Sources */,
-				F3A891CC292DDE61006A23FF /* Frameworks */,
-				F3A891CD292DDE61006A23FF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F3A891D1292DDE61006A23FF /* PBXTargetDependency */,
-			);
-			name = SquareEmployeeDirectoryUITests;
-			productName = SquareEmployeeDirectoryUITests;
-			productReference = F3A891CF292DDE61006A23FF /* SquareEmployeeDirectoryUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -296,10 +295,6 @@
 						CreatedOnToolsVersion = 13.4.1;
 					};
 					F3A891C4292DDE61006A23FF = {
-						CreatedOnToolsVersion = 13.4.1;
-						TestTargetID = F3A891AB292DDE60006A23FF;
-					};
-					F3A891CE292DDE61006A23FF = {
 						CreatedOnToolsVersion = 13.4.1;
 						TestTargetID = F3A891AB292DDE60006A23FF;
 					};
@@ -320,7 +315,6 @@
 			targets = (
 				F3A891AB292DDE60006A23FF /* SquareEmployeeDirectory */,
 				F3A891C4292DDE61006A23FF /* SquareEmployeeDirectoryTests */,
-				F3A891CE292DDE61006A23FF /* SquareEmployeeDirectoryUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -342,13 +336,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F3A891CD292DDE61006A23FF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -359,15 +346,25 @@
 				F3A891FE292DF906006A23FF /* SquareEmployeesAPIClientProtocol.swift in Sources */,
 				F3A89200292E1583006A23FF /* Throwable.swift in Sources */,
 				F38B103D292F5422009E7579 /* EmployeesViewModel.swift in Sources */,
+				F38B1049292F71AC009E7579 /* ImageWithFileSystemStorage+CoreDataClass.swift in Sources */,
+				F38B1047292F6F6E009E7579 /* UIImage+Data.swift in Sources */,
 				F3A89209292F1DF0006A23FF /* EmployeesViewController.swift in Sources */,
+				F3B2F78B293086D700910733 /* ProfilePictureRepository.swift in Sources */,
+				F38B1045292F6F26009E7579 /* ImageStorage.swift in Sources */,
 				F3A891B0292DDE60006A23FF /* AppDelegate.swift in Sources */,
+				F3B2F7912930C62500910733 /* EmployeeContentStackView.swift in Sources */,
 				F3A891BA292DDE60006A23FF /* SquareEmployeeDirectory.xcdatamodeld in Sources */,
 				F3A89203292E1AC8006A23FF /* Logger.swift in Sources */,
-				F3A8920B292F4E0A006A23FF /* EmployeeTableViewCell.swift in Sources */,
+				F38B1043292F6ED6009E7579 /* CoreDataImageRepository.swift in Sources */,
+				F32B5F712930D1A10069EFA1 /* EmployeeTableViewCell.swift in Sources */,
 				F3A891FC292DF7E6006A23FF /* SquareEmployeesAPIClient.swift in Sources */,
 				F3A891F4292DEB6A006A23FF /* SquareEmployeesResponse.swift in Sources */,
+				F3E9E4E129301B4F0017B369 /* ProfilePictureDiskCache.swift in Sources */,
 				F3A891B2292DDE60006A23FF /* SceneDelegate.swift in Sources */,
 				F38B103B292F537C009E7579 /* EmployeeViewModel.swift in Sources */,
+				F3B2F78D2930C27D00910733 /* TitleLabel.swift in Sources */,
+				F38B104B292F71C6009E7579 /* ImageWithFileSystemStorage+CoreDataProperties.swift in Sources */,
+				F3B2F78F2930C38200910733 /* ContentLabel.swift in Sources */,
 				F3A891F8292DF345006A23FF /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,16 +373,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3A891CA292DDE61006A23FF /* SquareEmployeeDirectoryTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F3A891CB292DDE61006A23FF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F3A891D4292DDE61006A23FF /* SquareEmployeeDirectoryUITests.swift in Sources */,
-				F3A891D6292DDE61006A23FF /* SquareEmployeeDirectoryUITestsLaunchTests.swift in Sources */,
+				F38B104E29300125009E7579 /* ImageRepositoryTests.swift in Sources */,
+				F340E5D729300A670033645D /* SquareEmployeeDirectory.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,11 +385,6 @@
 			isa = PBXTargetDependency;
 			target = F3A891AB292DDE60006A23FF /* SquareEmployeeDirectory */;
 			targetProxy = F3A891C6292DDE61006A23FF /* PBXContainerItemProxy */;
-		};
-		F3A891D1292DDE61006A23FF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F3A891AB292DDE60006A23FF /* SquareEmployeeDirectory */;
-			targetProxy = F3A891D0292DDE61006A23FF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -624,42 +608,6 @@
 			};
 			name = Release;
 		};
-		F3A891E0292DDE61006A23FF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8MS87H3FQ4;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = david.mar.SquareEmployeeDirectoryUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SquareEmployeeDirectory;
-			};
-			name = Debug;
-		};
-		F3A891E1292DDE61006A23FF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8MS87H3FQ4;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = david.mar.SquareEmployeeDirectoryUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SquareEmployeeDirectory;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -686,15 +634,6 @@
 			buildConfigurations = (
 				F3A891DD292DDE61006A23FF /* Debug */,
 				F3A891DE292DDE61006A23FF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F3A891DF292DDE61006A23FF /* Build configuration list for PBXNativeTarget "SquareEmployeeDirectoryUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F3A891E0292DDE61006A23FF /* Debug */,
-				F3A891E1292DDE61006A23FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
