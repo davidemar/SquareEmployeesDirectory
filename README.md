@@ -1,3 +1,9 @@
+
+
+https://user-images.githubusercontent.com/16997813/204063089-1f8b81b2-f814-4337-ada5-a33eba2052f5.mp4
+
+
+
 ## Build tools & versions used
 This application was built using Xcode version 13.4.1 and Swift 5
 
@@ -22,7 +28,7 @@ This application was built using Xcode version 13.4.1 and Swift 5
     - Saving and downloading just images that are in the actual scope vision of the user instead of downloading all the images at once to be prepared for the scenario where the user is getting a lot of employees.
 
 ## What was the reason for your focus? What problems were you trying to solve?
-    - Having a large list of employees.
+    - Be prepared for having a large list of employees.
     - The main user flow being break by future development
     - Knowing when the saving images flow breaks in future development.
     - Storing performance and not downloading or save images that we already have.
