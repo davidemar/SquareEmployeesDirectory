@@ -78,14 +78,14 @@ class EmployeeTableViewCell: UITableViewCell {
         }
     }
     
-        private func setupViewModel(viewModel: EmployeeViewModel) {
-            self.phoneLabel.text = viewModel.phoneNumber
-            self.emailLabel.text = viewModel.email
-            self.teamLabel.text = viewModel.team
-            self.nameLabel.text = viewModel.name
-            self.bioLabel.text = viewModel.biography
-            self.idLabel.text = viewModel.id
-        }
+    private func setupViewModel(viewModel: EmployeeViewModel) {
+        self.phoneLabel.text = viewModel.phoneNumber
+        self.emailLabel.text = viewModel.email
+        self.teamLabel.text = viewModel.team
+        self.nameLabel.text = viewModel.name
+        self.bioLabel.text = viewModel.biography
+        self.idLabel.text = viewModel.id
+    }
     
 }
 

@@ -21,8 +21,3 @@ class EmployeeContentStackView: UIStackView {
         fatalError("init(coder:) has not been implemented")
     }
 }
-
-//class EmployeeTableViewCell: UITableViewCell {
-//
-//    static let reuseIdentifier: String = String(describing: EmployeeTableViewCell.self)
-//}

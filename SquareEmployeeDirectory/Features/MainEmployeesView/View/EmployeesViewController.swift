@@ -11,6 +11,12 @@ import UIKit
 class EmployessViewController: UIViewController {
     
     private let tableView = UITableView()
+    private let titleLabel: UILabel = {
+        let titleLabel = UILabel()
+        titleLabel.font = UIFont.systemFont(ofSize: 32, weight: .bold)
+        titleLabel.text = "Square Employees"
+        return titleLabel
+    }()
     
     private var viewModel = {
         return EmployeesViewModel(api: SquareEmployeesAPIClient(),
@@ -20,16 +26,17 @@ class EmployessViewController: UIViewController {
     
     override func loadView() {
         super.loadView()
+        view.addSubview(tableView)
+        view.addSubview(titleLabel)
+        setupTitleLabel()
         setupTableView()
     }
   
     func setupTableView() {
-        view.addSubview(tableView)
-        let safeArea = view.layoutMarginsGuide
+        
         tableView.dataSource = self
         tableView.delegate = self
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.topAnchor.constraint(equalTo: safeArea.topAnchor).isActive = true
         tableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
@@ -39,8 +46,16 @@ class EmployessViewController: UIViewController {
         tableView.estimatedRowHeight = 150
     }
     
+    func setupTitleLabel() {
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor, constant: 32).isActive = true
+        titleLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 16).isActive = true
+        titleLabel.bottomAnchor.constraint(equalTo: tableView.topAnchor, constant: -16).isActive = true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .systemBackground
         setupViewModel()
     }
     
@@ -57,9 +72,11 @@ class EmployessViewController: UIViewController {
 }
 
 extension EmployessViewController: UITableViewDataSource, UITableViewDelegate {
+    
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
       return viewModel.employeeViewModels.count
   }
+    
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
       guard let cell = tableView.dequeueReusableCell(withIdentifier: EmployeeTableViewCell.reuseIdentifier, for: indexPath) as? EmployeeTableViewCell else {
           Logger.shared.logError(errorString: "Can't reuse \(EmployeeTableViewCell.reuseIdentifier)")

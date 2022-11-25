@@ -11,13 +11,18 @@ class EmployeesViewModel: NSObject {
 
     var apiClient: SquareEmployeesAPIClientProtocol
     var reloadTableView: (() -> Void)?
+    var showEmptyBanner: (() -> Void)?
     
     private var employees = [Employee]()
     private var repository: ProfilePictureRepositoryProtocol
     
     var employeeViewModels = [EmployeeViewModel]() {
         didSet {
-            reloadTableView?()
+            if employeeViewModels.count == 0{
+                showEmptyBanner?()
+            } else {
+                reloadTableView?()
+            }
         }
     }
     
