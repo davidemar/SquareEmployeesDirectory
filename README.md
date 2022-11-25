@@ -36,11 +36,12 @@ This application was built using Xcode version 13.4.1 and Swift 5
     Also in the SquareEmployeesAPIClient implementation the endpoint can be changed between the empty, the malformed and the success API I think that with this endpoints a dev tool can be developed that activates with a shake and can let the developer to choose an endpoint to see every response.
 
 ## What do you think is the weakest part of your project?
-I think the UI is the weakes part of the project since I focused more in performance and architecture.
+I think the UI since I focused more in performance and architecture.
 
 ## Did you copy any code or dependencies? Please make sure to attribute them here!
-Yes I ussed this implementation to decode just one object failing to parse in the employees list instead of not showing the whole list
+Yes I used this implementation to decode just one object failing to parse in the employees list instead of not showing the whole list
 https://medium.com/@michaeldouglascs/how-to-safely-decode-arrays-using-decodable-result-type-in-swift-5b975ea11ff5
 
 ## Is there any other information you’d like us to know?
 Before the actual development I designed the architecture in this diagram to help me have a clear idea of what I am working on.
+<img width="958" alt="Screen Shot 2022-11-25 at 3 27 24 PM" src="https://user-images.githubusercontent.com/16997813/204063030-6314951b-9e94-48cb-8912-ddcd92c774fb.png">
