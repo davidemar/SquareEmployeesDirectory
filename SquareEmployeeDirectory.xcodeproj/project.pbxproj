@@ -18,7 +18,7 @@
 		F38B1047292F6F6E009E7579 /* UIImage+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38B1046292F6F6E009E7579 /* UIImage+Data.swift */; };
 		F38B1049292F71AC009E7579 /* ImageWithFileSystemStorage+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38B1048292F71AC009E7579 /* ImageWithFileSystemStorage+CoreDataClass.swift */; };
 		F38B104B292F71C6009E7579 /* ImageWithFileSystemStorage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38B104A292F71C6009E7579 /* ImageWithFileSystemStorage+CoreDataProperties.swift */; };
-		F38B104E29300125009E7579 /* ImageRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38B104D29300125009E7579 /* ImageRepositoryTests.swift */; };
+		F38B104E29300125009E7579 /* CoreDataImageRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38B104D29300125009E7579 /* CoreDataImageRepositoryTests.swift */; };
 		F3A891B0292DDE60006A23FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A891AF292DDE60006A23FF /* AppDelegate.swift */; };
 		F3A891B2292DDE60006A23FF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A891B1292DDE60006A23FF /* SceneDelegate.swift */; };
 		F3A891BA292DDE60006A23FF /* SquareEmployeeDirectory.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F3A891B8292DDE60006A23FF /* SquareEmployeeDirectory.xcdatamodeld */; };
@@ -59,7 +59,7 @@
 		F38B1046292F6F6E009E7579 /* UIImage+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Data.swift"; sourceTree = "<group>"; };
 		F38B1048292F71AC009E7579 /* ImageWithFileSystemStorage+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageWithFileSystemStorage+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F38B104A292F71C6009E7579 /* ImageWithFileSystemStorage+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageWithFileSystemStorage+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		F38B104D29300125009E7579 /* ImageRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRepositoryTests.swift; sourceTree = "<group>"; };
+		F38B104D29300125009E7579 /* CoreDataImageRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataImageRepositoryTests.swift; sourceTree = "<group>"; };
 		F3A891AC292DDE60006A23FF /* SquareEmployeeDirectory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SquareEmployeeDirectory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3A891AF292DDE60006A23FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3A891B1292DDE60006A23FF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,7 +124,7 @@
 		F38B104C293000B6009E7579 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				F38B104D29300125009E7579 /* ImageRepositoryTests.swift */,
+				F38B104D29300125009E7579 /* CoreDataImageRepositoryTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -387,7 +387,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F38B104E29300125009E7579 /* ImageRepositoryTests.swift in Sources */,
+				F38B104E29300125009E7579 /* CoreDataImageRepositoryTests.swift in Sources */,
 				F340E5D729300A670033645D /* SquareEmployeeDirectory.xcdatamodeld in Sources */,
 				F32B5F77293179130069EFA1 /* EmployeesViewModelTests.swift in Sources */,
 				F32B5F75293176280069EFA1 /* SquareEmployeesAPIClientMock.swift in Sources */,

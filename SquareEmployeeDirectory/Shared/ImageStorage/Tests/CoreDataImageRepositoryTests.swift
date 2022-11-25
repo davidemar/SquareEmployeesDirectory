@@ -9,10 +9,10 @@ import XCTest
 import CoreData
 @testable import SquareEmployeeDirectory
 
-class ImageRepositoryTests: XCTestCase {
+class CoreDataImageRepositoryTests: XCTestCase {
 
     let container: NSPersistentContainer = {
-        let bundle = Bundle(for: ImageRepositoryTests.self)
+        let bundle = Bundle(for: CoreDataImageRepositoryTests.self)
         let model = NSManagedObjectModel.mergedModel(from: [bundle])
         let container = NSPersistentContainer(name: "SquareEmployeeDirectory", managedObjectModel: model!)
         let description = NSPersistentStoreDescription()
