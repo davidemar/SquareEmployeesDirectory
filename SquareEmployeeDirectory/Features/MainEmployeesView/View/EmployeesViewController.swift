@@ -11,6 +11,9 @@ import UIKit
 class EmployessViewController: UIViewController {
     
     private let tableView = UITableView()
+    private let refreshControl: UIRefreshControl = {
+        return UIRefreshControl()
+    }()
     private let titleLabel: UILabel = {
         let titleLabel = UILabel()
         titleLabel.font = UIFont.systemFont(ofSize: 32, weight: .bold)
@@ -33,7 +36,6 @@ class EmployessViewController: UIViewController {
     }
   
     func setupTableView() {
-        
         tableView.dataSource = self
         tableView.delegate = self
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -44,6 +46,8 @@ class EmployessViewController: UIViewController {
                            forCellReuseIdentifier: EmployeeTableViewCell.reuseIdentifier)
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 150
+        tableView.refreshControl = refreshControl
+        tableView.refreshControl?.addTarget(self, action: #selector(refreshControlPulled), for: .valueChanged)
     }
     
     func setupTitleLabel() {
@@ -64,7 +68,15 @@ class EmployessViewController: UIViewController {
         viewModel.reloadTableView = {[weak self] in
             guard let self = self else { return }
             DispatchQueue.main.async {
+                self.tableView.refreshControl?.endRefreshing()
+                self.refreshControl.isHidden = true
                 self.tableView.reloadData()
+            }
+        }
+        viewModel.showEmptyBanner = {
+            DispatchQueue.main.async {
+                self.tableView.refreshControl?.endRefreshing()
+                self.refreshControl.isHidden = true
             }
         }
     }
@@ -94,4 +106,11 @@ extension EmployessViewController: UITableViewDataSource, UITableViewDelegate {
         return UITableView.automaticDimension
     }
     
+}
+
+//MARK: - Pull to refresh
+extension EmployessViewController {
+    @objc func refreshControlPulled() {
+        setupViewModel()
+    }
 }
