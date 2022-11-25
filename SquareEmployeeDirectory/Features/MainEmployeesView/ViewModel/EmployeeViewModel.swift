@@ -30,7 +30,7 @@ class EmployeeViewModel {
     private var profilePictureRepository: ProfilePictureRepositoryProtocol?
     
     init(employee: Employee,
-         profilePictureRepository: ProfilePictureRepositoryProtocol) {
+         profilePictureRepository: ProfilePictureRepositoryProtocol?) {
         self.id = employee.id
         self.name = employee.name
         self.phoneNumber = employee.phoneNumber

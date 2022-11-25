@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F32B5F712930D1A10069EFA1 /* EmployeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32B5F6F2930D1A10069EFA1 /* EmployeeTableViewCell.swift */; };
+		F32B5F75293176280069EFA1 /* SquareEmployeesAPIClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32B5F74293176280069EFA1 /* SquareEmployeesAPIClientMock.swift */; };
+		F32B5F77293179130069EFA1 /* EmployeesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32B5F76293179130069EFA1 /* EmployeesViewModelTests.swift */; };
 		F340E5D729300A670033645D /* SquareEmployeeDirectory.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F3A891B8292DDE60006A23FF /* SquareEmployeeDirectory.xcdatamodeld */; };
 		F38B103B292F537C009E7579 /* EmployeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38B103A292F537C009E7579 /* EmployeeViewModel.swift */; };
 		F38B103D292F5422009E7579 /* EmployeesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38B103C292F5422009E7579 /* EmployeesViewModel.swift */; };
@@ -48,6 +50,8 @@
 
 /* Begin PBXFileReference section */
 		F32B5F6F2930D1A10069EFA1 /* EmployeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableViewCell.swift; sourceTree = "<group>"; };
+		F32B5F74293176280069EFA1 /* SquareEmployeesAPIClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareEmployeesAPIClientMock.swift; sourceTree = "<group>"; };
+		F32B5F76293179130069EFA1 /* EmployeesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesViewModelTests.swift; sourceTree = "<group>"; };
 		F38B103A292F537C009E7579 /* EmployeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewModel.swift; sourceTree = "<group>"; };
 		F38B103C292F5422009E7579 /* EmployeesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesViewModel.swift; sourceTree = "<group>"; };
 		F38B1042292F6ED6009E7579 /* CoreDataImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataImageRepository.swift; sourceTree = "<group>"; };
@@ -96,6 +100,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F32B5F73293175E90069EFA1 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F32B5F74293176280069EFA1 /* SquareEmployeesAPIClientMock.swift */,
+				F32B5F76293179130069EFA1 /* EmployeesViewModelTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 		F38B1041292F6E99009E7579 /* ImageStorage */ = {
 			isa = PBXGroup;
 			children = (
@@ -228,6 +241,7 @@
 		F3A89207292F1C59006A23FF /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				F32B5F73293175E90069EFA1 /* Tests */,
 				F38B103A292F537C009E7579 /* EmployeeViewModel.swift */,
 				F38B103C292F5422009E7579 /* EmployeesViewModel.swift */,
 			);
@@ -375,6 +389,8 @@
 			files = (
 				F38B104E29300125009E7579 /* ImageRepositoryTests.swift in Sources */,
 				F340E5D729300A670033645D /* SquareEmployeeDirectory.xcdatamodeld in Sources */,
+				F32B5F77293179130069EFA1 /* EmployeesViewModelTests.swift in Sources */,
+				F32B5F75293176280069EFA1 /* SquareEmployeesAPIClientMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

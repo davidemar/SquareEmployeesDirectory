@@ -14,7 +14,7 @@ class EmployeesViewModel: NSObject {
     var showEmptyBanner: (() -> Void)?
     
     private var employees = [Employee]()
-    private var repository: ProfilePictureRepositoryProtocol
+    private var repository: ProfilePictureRepositoryProtocol?
     
     var employeeViewModels = [EmployeeViewModel]() {
         didSet {
@@ -26,7 +26,7 @@ class EmployeesViewModel: NSObject {
         }
     }
     
-    init(api: SquareEmployeesAPIClientProtocol, profilePictureRepository: ProfilePictureRepositoryProtocol) {
+    init(api: SquareEmployeesAPIClientProtocol, profilePictureRepository: ProfilePictureRepositoryProtocol?) {
         self.apiClient = api
         self.repository = profilePictureRepository
     }

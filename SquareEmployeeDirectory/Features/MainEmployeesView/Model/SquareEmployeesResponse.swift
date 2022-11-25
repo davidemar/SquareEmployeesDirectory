@@ -38,7 +38,18 @@ struct Employee: Codable {
 }
 
 struct SquareEmployeesResponse: Codable {
+    
     var employees = [Employee]()
+    
+    init() {}
+    
+    static func mockResponse() -> SquareEmployeesResponse {
+        var response = SquareEmployeesResponse()
+        let employee = Employee(id: "7777", name: "David", email: "david@david.com", team: "iOS", employeeType: .fullTime)
+        response.employees.append(employee)
+        return response
+    }
+    
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         let throwables = try values.decode([Throwable<Employee>].self, forKey: .employees)
