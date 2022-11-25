@@ -60,29 +60,40 @@ class EmployessViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
-        setupViewModel()
+        setupViewModelListeners()
+        getEmployees()
+        Logger.shared.logEvent(name: "Employees Viewed", surface: "Employees View Controller")
     }
     
-    private func setupViewModel() {
-        viewModel.getEmployees()
+    private func setupViewModelListeners() {
         viewModel.reloadTableView = {[weak self] in
             guard let self = self else { return }
             DispatchQueue.main.async {
-                self.tableView.refreshControl?.endRefreshing()
-                self.refreshControl.isHidden = true
+                self.tableView.backgroundView = nil
+                self.hideRefreshControl()
                 self.tableView.reloadData()
             }
         }
         viewModel.showEmptyBanner = {
             DispatchQueue.main.async {
-                self.tableView.refreshControl?.endRefreshing()
-                self.refreshControl.isHidden = true
+                self.hideRefreshControl()
+                self.displayEmptyMessage()
             }
         }
     }
     
+    private func hideRefreshControl() {
+        self.refreshControl.isHidden = true
+        self.tableView.refreshControl?.endRefreshing()
+    }
+    
+    private func getEmployees() {
+        viewModel.getEmployees()
+    }
+    
 }
 
+//MARK: UITableViewDataSource, UITableViewDelegate
 extension EmployessViewController: UITableViewDataSource, UITableViewDelegate {
     
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -111,6 +122,21 @@ extension EmployessViewController: UITableViewDataSource, UITableViewDelegate {
 //MARK: - Pull to refresh
 extension EmployessViewController {
     @objc func refreshControlPulled() {
-        setupViewModel()
+        getEmployees()
+    }
+}
+
+//MARK: Empty State
+extension EmployessViewController {
+    func displayEmptyMessage() {
+        let rect = CGRect(origin: CGPoint(x: 0,y :0), size: CGSize(width: self.view.bounds.size.width, height: self.view.bounds.size.height))
+        let messageLabel = UILabel(frame: rect)
+        messageLabel.text = "There are no employees, try pull to refresh"
+        messageLabel.numberOfLines = 0;
+        messageLabel.textAlignment = .center;
+        messageLabel.font = UIFont.systemFont(ofSize: 16, weight: .light)
+        messageLabel.sizeToFit()
+        tableView.backgroundView = messageLabel;
+        tableView.separatorStyle = .none;
     }
 }
