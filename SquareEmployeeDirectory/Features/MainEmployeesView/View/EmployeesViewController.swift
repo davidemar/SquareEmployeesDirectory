@@ -13,7 +13,9 @@ class EmployessViewController: UIViewController {
     private let tableView = UITableView()
     
     private var viewModel = {
-        return EmployeesViewModel(api: SquareEmployeesAPIClient())
+        return EmployeesViewModel(api: SquareEmployeesAPIClient(),
+                                  profilePictureRepository: ProfilePictureRepository(profilePictureDiskCache: ProfilePictureDiskCache())
+        )
     }()
     
     override func loadView() {
@@ -24,13 +26,17 @@ class EmployessViewController: UIViewController {
     func setupTableView() {
         view.addSubview(tableView)
         let safeArea = view.layoutMarginsGuide
+        tableView.dataSource = self
+        tableView.delegate = self
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.topAnchor.constraint(equalTo: safeArea.topAnchor).isActive = true
         tableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-        tableView.register(EmployeeTableViewCell.self, forCellReuseIdentifier: EmployeeTableViewCell.reuseIdentifier)
-        tableView.dataSource = self
+        tableView.register(EmployeeTableViewCell.self,
+                           forCellReuseIdentifier: EmployeeTableViewCell.reuseIdentifier)
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 150
     }
     
     override func viewDidLoad() {
@@ -50,7 +56,7 @@ class EmployessViewController: UIViewController {
     
 }
 
-extension EmployessViewController: UITableViewDataSource {
+extension EmployessViewController: UITableViewDataSource, UITableViewDelegate {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
       return viewModel.employeeViewModels.count
   }
@@ -63,8 +69,12 @@ extension EmployessViewController: UITableViewDataSource {
           Logger.shared.logError(errorString: "Can't find view model at index row: \(indexPath.row)")
           return UITableViewCell()
       }
-      cell.textLabel?.text = employeeViewModel.name
-      cell.setupCell(image: "EmptyUserIcon")
+      cell.setupCell(viewModel: employeeViewModel)
       return cell
   }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
 }

@@ -13,6 +13,7 @@ class EmployeesViewModel: NSObject {
     var reloadTableView: (() -> Void)?
     
     private var employees = [Employee]()
+    private var repository: ProfilePictureRepositoryProtocol
     
     var employeeViewModels = [EmployeeViewModel]() {
         didSet {
@@ -20,12 +21,14 @@ class EmployeesViewModel: NSObject {
         }
     }
     
-    init(api: SquareEmployeesAPIClientProtocol) {
+    init(api: SquareEmployeesAPIClientProtocol, profilePictureRepository: ProfilePictureRepositoryProtocol) {
         self.apiClient = api
+        self.repository = profilePictureRepository
     }
     
     func getEmployees() {
-        apiClient.getEmployees { result in
+        apiClient.getEmployees {[weak self] result in
+            guard let self = self else { return }
             switch result {
             case .success(let response):
                 self.handleEmployeesResponse(response: response)
@@ -39,7 +42,7 @@ class EmployeesViewModel: NSObject {
         self.employees = response.employees
         var vms = [EmployeeViewModel]()
         for employee in employees {
-            vms.append(EmployeeViewModel(employee: employee))
+            vms.append(EmployeeViewModel(employee: employee, profilePictureRepository: repository))
         }
         employeeViewModels = vms
     }
